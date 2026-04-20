@@ -1,11 +1,133 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family:Arial;
+      background:#0f172a;
+      color:#fff;
+    }
+
+    nav {
+      background:#020617;
+      padding:15px;
+      text-align:center;
+    }
+
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+      position:relative;
+    }
+
+    nav a:hover { color:#22c55e; }
+
+    nav a::after {
+      content:"";
+      position:absolute;
+      width:0%;
+      height:2px;
+      bottom:-5px;
+      left:0;
+      background:#22c55e;
+      transition:0.3s;
+    }
+
+    nav a:hover::after { width:100%; }
+
+    header {
+      text-align:center;
+      padding:60px 20px;
+    }
+
+    .container {
+      max-width:1000px;
+      margin:auto;
+      padding:20px;
+    }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      margin-bottom:20px;
+      border-radius:12px;
+      transition:0.3s;
+      opacity:0;
+      transform:translateY(20px);
+      animation:fadeUp 0.8s ease forwards;
+    }
+
+    .card:nth-child(1) { animation-delay:0.3s; }
+    .card:nth-child(2) { animation-delay:0.6s; }
+    .card:nth-child(3) { animation-delay:0.9s; }
+
+    .card:hover {
+      transform:translateY(-8px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      color:#94a3b8;
+    }
+  </style>
 </head>
-<body style="background:#0f172a;color:#fff;font-family:Arial;text-align:center;padding:40px;">
-  <h1>Sobre mim</h1>
-  <p>Sou um desenvolvedor apaixonado por tecnologia e por transformar ideias em projetos reais. Estou sempre buscando aprender coisas novas e melhorar minhas habilidades, principalmente em criação de sites e sistemas. Tenho experiência com HTML, CSS e JavaScript, Lua, Java,  e gosto de explorar diferentes formas de criar interfaces modernas, rápidas e funcionais. Meu objetivo é crescer cada vez mais na área de desenvolvimento, construir projetos de qualidade e me destacar no mundo da programação. Estou sempre evoluindo e pronto para novos desafios.</p>
-  <a href="index.html">Voltar</a>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="contato.html">Contato</a>
+  <a href="habilidades.html">Habilidades</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="experiencia.html">Experiência</a>
+  <a href="redes.html">Redes</a>
+</nav>
+
+<header>
+  <h1>👨‍💻 Sobre Mim</h1>
+  <p>Conheça mais sobre o desenvolvedor</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🚀 Quem sou eu</h2>
+    <p>Sou um desenvolvedor focado em criar sites, bots e automações. Gosto de tecnologia e sempre busco evoluir minhas habilidades.</p>
+  </div>
+
+  <div class="card">
+    <h2>💡 O que eu faço</h2>
+    <p>Desenvolvo sites modernos, bots para Discord/Telegram e scripts personalizados para diferentes necessidades.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎯 Objetivo</h2>
+    <p>Me tornar cada vez mais profissional na área de programação e criar projetos cada vez mais avançados.</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Gzee Scripts Dev ©
+</footer>
+
 </body>
 </html>
