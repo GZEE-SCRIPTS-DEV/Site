@@ -1,11 +1,117 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato</title>
+
+  <style>
+    body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
+
+    nav { background:#020617; padding:15px; text-align:center; }
+
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+      position:relative;
+    }
+
+    nav a:hover { color:#22c55e; }
+
+    nav a::after {
+      content:"";
+      position:absolute;
+      width:0%;
+      height:2px;
+      bottom:-5px;
+      left:0;
+      background:#22c55e;
+      transition:0.3s;
+    }
+
+    nav a:hover::after { width:100%; }
+
+    header { text-align:center; padding:60px 20px; }
+
+    .container { max-width:1000px; margin:auto; padding:20px; }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      border-radius:12px;
+      text-align:center;
+    }
+
+    .btn {
+      display:block;
+      margin:10px auto;
+      padding:12px;
+      width:250px;
+      background:#22c55e;
+      color:#000;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover {
+      background:#16a34a;
+      transform:scale(1.05);
+    }
+
+    footer {
+      text-align:center;
+      padding:20px;
+      color:#94a3b8;
+    }
+  </style>
 </head>
-<body style="background:#0f172a;color:#fff;font-family:Arial;text-align:center;padding:40px;">
-  <h1>Contato</h1>
-  <p>Email: juanpablohote@gmail.com</p>
-  <a href="index.html">Voltar</a>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="sobre.html">Sobre</a>
+  <a href="projetos.html">Projetos</a>
+  <a href="contato.html">Contato</a>
+  <a href="habilidades.html">Habilidades</a>
+  <a href="servicos.html">Serviços</a>
+  <a href="experiencia.html">Experiência</a>
+  <a href="redes.html">Redes</a>
+</nav>
+
+<header>
+  <h1>📞 Contato</h1>
+  <p>Fale comigo pelas plataformas abaixo</p>
+</header>
+
+<div class="container">
+  <div class="card">
+
+    <!-- WHATSAPP -->
+    <a class="btn" href="https://wa.me/5519995729970" target="_blank">
+      💬 Falar no WhatsApp
+    </a>
+
+    <!-- EMAIL -->
+    <a class="btn" href="mailto:juanpablohote@gmail.com">
+      📧 Enviar Email
+    </a>
+
+    <!-- INSTAGRAM -->
+    <a class="btn" href="https://instagram.com/gzeescriptsdev" target="_blank">
+      📸 Envie mensagem no Instagram
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  © 2026 Gzee Scripts Dev ©
+</footer>
+
 </body>
 </html>
