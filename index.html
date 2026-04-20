@@ -1,97 +1,118 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gzee Scripts Dev</title>
 
-  <style>
-/* BASE */
+<style>
 body {
   margin:0;
   font-family:Arial;
   background:#0f172a;
   color:#fff;
+  overflow-x:hidden;
+}
+
+/* FUNDO ANIMADO */
+body::before {
+  content:"";
+  position:fixed;
+  width:200%;
+  height:200%;
+  background: radial-gradient(circle, #22c55e22, transparent 70%);
+  animation: moveBg 10s linear infinite;
+  z-index:-1;
+}
+
+@keyframes moveBg {
+  0% {transform:translate(0,0);}
+  50% {transform:translate(-10%, -10%);}
+  100% {transform:translate(0,0);}
 }
 
 /* NAV */
 nav {
-  background:#020617;
+  background:rgba(2,6,23,0.8);
+  backdrop-filter: blur(10px);
   padding:15px;
-  text-align:center;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
 nav a {
   color:#fff;
-  margin:0 15px;
+  margin:10px;
   text-decoration:none;
   font-weight:bold;
-  position: relative;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color:#22c55e;
-}
-
-/* underline animado */
-nav a::after {
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  bottom:-5px;
-  left:0;
-  background:#22c55e;
   transition:0.3s;
 }
 
-nav a:hover::after {
-  width:100%;
-}
+nav a:hover { color:#22c55e; }
 
 /* HEADER */
 header {
   text-align:center;
-  padding:60px 20px;
+  padding:80px 20px;
 }
 
-/* CONTAINER */
+/* SEÇÕES */
+section {
+  padding:50px 20px;
+}
+
 .container {
   max-width:1000px;
   margin:auto;
-  padding:20px;
 }
 
-/* CARDS */
+/* CARDS GLASS */
 .card {
-  background:#1e293b;
+  background:rgba(30,41,59,0.6);
+  backdrop-filter: blur(10px);
   padding:20px;
-  margin-bottom:20px;
   border-radius:12px;
-  transition: all 0.3s ease;
+  margin-bottom:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  transform:translateY(50px);
+  opacity:0;
+  transition:0.6s;
+}
+
+.card.show {
+  transform:translateY(0);
+  opacity:1;
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transform:scale(1.02);
 }
 
 /* BOTÃO */
 .btn {
   display:inline-block;
-  padding:10px 18px;
+  padding:10px 20px;
   background:#22c55e;
   color:#000;
   text-decoration:none;
   border-radius:8px;
   margin-top:10px;
-  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background:#16a34a;
-  transform: scale(1.05);
+/* WHATS */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25d366;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  text-decoration:none;
 }
 
 /* FOOTER */
@@ -101,63 +122,90 @@ footer {
   color:#94a3b8;
 }
 
-/* ANIMAÇÃO DE ENTRADA */
-header, .card, footer {
-  opacity:0;
-  transform:translateY(20px);
-  animation:fadeUp 0.8s ease forwards;
-}
-
-header { animation-delay:0.2s; }
-.card:nth-child(1) { animation-delay:0.4s; }
-.card:nth-child(2) { animation-delay:0.6s; }
-footer { animation-delay:0.8s; }
-
-@keyframes fadeUp {
-  to {
-    opacity:1;
-    transform:translateY(0);
+/* RESPONSIVO */
+@media(max-width:600px){
+  nav {
+    flex-direction:column;
   }
 }
-  </style>
+</style>
 </head>
 
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="sobre.html">Sobre</a>
-  <a href="projetos.html">Projetos</a>
-  <a href="contato.html">Contato</a>
-  <a href="habilidades.html">Habilidades</a>
-  <a href="servicos.html">Serviços</a>
-  <a href="experiencia.html">Experiência</a>
-  <a href="redes.html">Redes</a>
+  <a href="#">Home</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#contato">Contato</a>
 </nav>
 
 <header>
   <h1>👨‍💻 Gzee Scripts Dev</h1>
-  <p>Desenvolvedor</p>
+  <p>Sites • Bots • Automações</p>
+  <a class="btn" href="#contato">Fale comigo</a>
 </header>
 
-<div class="container">
-
-  <div class="card">
-    <h2>🚀 Bem-vindo</h2>
-    <p>Esse é meu portfólio profissional.</p>
-    <a class="btn" href="projetos.html">Ver Projetos</a>
+<section id="sobre">
+  <div class="container">
+    <div class="card">
+      <h2>🚀 Sobre Mim</h2>
+      <p>Desenvolvedor focado em tecnologia, criando soluções modernas e eficientes.</p>
+    </div>
   </div>
+</section>
 
-  <div class="card">
-    <h2>🛠️ Tecnologias</h2>
-    <p>HTML, CSS, JavaScript, React, Python, Lua</p>
+<section id="servicos">
+  <div class="container">
+    <div class="card">
+      <h2>🛠️ Serviços</h2>
+      <p>✔️ Sites modernos</p>
+      <p>✔️ Bots personalizados</p>
+      <p>✔️ Automações</p>
+    </div>
   </div>
+</section>
 
-</div>
+<section id="projetos">
+  <div class="container">
+    <div class="card">
+      <h2>📂 Projetos</h2>
+      <p>✔️ Bots</p>
+      <p>✔️ Sistemas</p>
+      <p>✔️ Sites</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato">
+  <div class="container">
+    <div class="card">
+      <h2>📞 Contato</h2>
+      <p>📧 juanpablohote@gmail.com</p>
+      <p>📸 @gzeescriptsdev</p>
+    </div>
+  </div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5519995729970" target="_blank">💬</a>
 
 <footer>
   © 2026 Gzee Scripts Dev ©
 </footer>
+
+<script>
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      card.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
