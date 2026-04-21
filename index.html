@@ -1,97 +1,34 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev Portfolio</title>
-
   <style>
     body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
+    nav { background:#020617; padding:15px; text-align:center; position:relative; }.menu-btn {
+  position:absolute;
+  left:15px;
+  top:12px;
+  background:#22c55e;
+  color:#000;
+  padding:8px 12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
 
-    nav { background:#020617; padding:15px; text-align:center; }
+nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+nav a:hover { color:#22c55e; }
+header { text-align:center; padding:60px 20px; }
+.container { max-width:1000px; margin:auto; padding:20px; }
+.card { background:#1e293b; padding:20px; margin-bottom:20px; border-radius:12px; }
+.btn { display:inline-block; padding:10px 18px; background:#22c55e; color:#000; text-decoration:none; border-radius:8px; margin-top:10px; }
+footer { text-align:center; padding:20px; color:#94a3b8; }
 
-    nav a {
-      color:#fff;
-      margin:0 15px;
-      text-decoration:none;
-      font-weight:bold;
-      position:relative;
-      transition:0.3s;
-    }
-
-    nav a:hover { color:#22c55e; }
-
-    nav a::after {
-      content:"";
-      position:absolute;
-      width:0%;
-      height:2px;
-      bottom:-5px;
-      left:0;
-      background:#22c55e;
-      transition:0.3s;
-    }
-
-    nav a:hover::after { width:100%; }
-
-    header { text-align:center; padding:60px 20px; }
-
-    .container { max-width:1000px; margin:auto; padding:20px; }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      margin-bottom:20px;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .card:hover {
-      transform:translateY(-6px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    }
-
-    /* BOTÃO CORRIGIDO */
-    .btn {
-      display:inline-block;
-      padding:10px 18px;
-      background:#22c55e;
-      color:#000 !important;
-      text-decoration:none;
-      border-radius:8px;
-      margin-top:10px;
-      transition:0.3s;
-      font-weight:bold;
-    }
-
-    .btn:hover {
-      background:#16a34a;
-      transform:scale(1.05);
-      color:#000 !important;
-    }
-
-    /* LINKS NORMAIS */
-    .card a {
-      color:#22c55e;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .card a:hover {
-      text-decoration:underline;
-    }
-
-    footer {
-      text-align:center;
-      padding:20px;
-      color:#94a3b8;
-    }
   </style>
 </head>
-
-<body>
-
-<nav>
+<body><nav>
+  <a class="menu-btn" href="extra.html" style="position:absolute;left:15px;top:12px;background:#22c55e;color:#000;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:bold;">☰</a>
   <a href="index.html">Home</a>
   <a href="sobre.html">Sobre</a>
   <a href="projetos.html">Projetos</a>
@@ -100,63 +37,57 @@
   <a href="servicos.html">Serviços</a>
   <a href="experiencia.html">Experiência</a>
   <a href="redes.html">Redes</a>
-</nav>
-
-<header>
-  <h1>👨‍💻 Gzee Scripts Dev</h1>
-  <p>Desenvolvedor</p>
-</header>
-
-<div class="container">
-
-  <div class="card">
-    <h2>🚀 Bem-vindo</h2>
-    <p>Esse é meu portfólio profissional.</p>
-    <a class="btn" href="projetos.html">Ver Projetos</a>
-  </div>
-
-  <div class="card">
-    <h2>🚀 Sobre Mim</h2>
-    <p>Sou desenvolvedor focado em criação de sites, bots e automações.</p>
-  </div>
-
-  <div class="card">
-    <h2>🛠️ Serviços</h2>
-    <p>🌐 Criação de sites</p>
-    <p>🤖 Bots</p>
-    <p>⚙️ Scripts</p>
-  </div>
-
-  <div class="card">
-    <h2>📂 Projetos</h2>
-    <p>✔️ Bots</p>
-    <p>✔️ Sistemas</p>
-    <p>✔️ Sites</p>
-  </div>
-
-  <div class="card">
-    <h2>🛠️ Tecnologias</h2>
+</nav><header>
+  <h1>👨‍💻 Seu Nome</h1>
+  <p>Desenvolvedor Web</p>
+</header><div class="container">  <div class="card" id="experiencia">
+    <h2>💼 Experiência</h2>
+    <p>Experiência com desenvolvimento web, criação de sites e projetos personalizados.</p>
+  </div>  <div class="card" id="habilidades">
+    <h2>🛠️ Habilidades</h2>
     <p>HTML, CSS, JavaScript, React</p>
-    <p>Python, Lua</p>
-  </div>
-
-  <div class="card">
+  </div>  <div class="card" id="servicos">
+    <h2>🚀 Serviços</h2>
+    <p>Criação de sites, landing pages e projetos personalizados.</p>
+  </div>  <div class="card" id="contato">
     <h2>📞 Contato</h2>
-
-    <p>📧 
-      <a href="mailto: juanpablohote@gmail.com">
-        juanpablohote@gmail.com
-      </a>
-    </p>
-
-    <p>📸 
-      <a href="https://instagram.com/gzeescriptsdev" target="_blank">
-        @gzeescriptsdev
-      </a>
-    </p>
-
-    <a class="btn" href="https://wa.me/5519995729970" target="_blank">
-      💬 Falar no WhatsApp
-    </a>
-
-  </div
+    <p>Email: seuemail@email.com</p>
+  </div></div><footer>
+  © 2026 Dev Portfolio
+</footer></body>
+</html><!-- ===================== EXTRA.HTML ===================== --><!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Extra</title>
+  <style>
+    body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
+    nav { background:#020617; padding:15px; text-align:center; }
+    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
+    nav a:hover { color:#22c55e; }
+    .container { padding:40px; }
+    .card { background:#1e293b; padding:20px; margin-bottom:20px; border-radius:12px; }
+  </style>
+</head>
+<body><nav>
+  <a href="index.html">Home</a>
+  <a href="#experiencia">Experiência</a>
+  <a href="#habilidades">Habilidades</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Contato</a>
+</nav><div class="container">  <div class="card" id="experiencia">
+    <h2>💼 Experiência</h2>
+    <p>Aqui você pode detalhar sua experiência profissional, projetos e trabalhos.</p>
+  </div>  <div class="card" id="habilidades">
+    <h2>🛠️ Habilidades</h2>
+    <p>Adicione mais habilidades ou níveis (iniciante, intermediário, avançado).</p>
+  </div>  <div class="card" id="servicos">
+    <h2>🚀 Serviços</h2>
+    <p>Descreva melhor o que você oferece e como pode ajudar clientes.</p>
+  </div>  <div class="card" id="contato">
+    <h2>📞 Contato</h2>
+    <p>Email, redes sociais ou outras formas de contato.</p>
+  </div>  <div class="card">
+    <h2>🌐 Redes</h2>
+    <p>Instagram, GitHub, Discord, etc.</p>
+  </div></div></body>
+</html>
