@@ -5,15 +5,53 @@
 <title>Dev Portfolio</title><style>
 body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
 nav{background:#020617;padding:15px;text-align:center;position:relative}
-.menu-btn{position:absolute;left:15px;top:12px;font-size:20px;cursor:pointer}
-.dropdown{display:none;position:absolute;top:50px;left:15px;background:#1e293b;border-radius:10px;padding:10px}
+.menu-btn{position:absolute;left:15px;top:12px;font-size:20px;cursor:pointer;transition:0.3s}
+.menu-btn:hover{transform:rotate(90deg)}
+
+.dropdown{display:none;position:absolute;top:50px;left:15px;background:#1e293b;border-radius:10px;padding:10px;animation:fadeIn 0.3s}
 .dropdown a{display:block;padding:8px;color:#fff;text-decoration:none;cursor:pointer}
 .dropdown a:hover{background:#22c55e;color:#000}
+
 nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold}
 header{text-align:center;padding:60px}
 .container{max-width:1000px;margin:auto;padding:20px}
-.card{background:#1e293b;padding:20px;margin-bottom:20px;border-radius:12px}
-.hidden{display:none}
+
+.card{background:#1e293b;padding:20px;margin-bottom:20px;border-radius:12px;transition:0.4s}
+.card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 10px 25px rgba(0,0,0,0.5)}
+
+.btn{display:inline-block;padding:10px 18px;background:#22c55e;color:#000;text-decoration:none;border-radius:8px;margin-top:10px;font-weight:bold;transition:0.3s}
+.btn:hover{background:#16a34a;transform:scale(1.1)}
+
+.social a{
+ display:inline-block;
+ margin:5px;
+ padding:10px 14px;
+ background:#334155;
+ border-radius:8px;
+ color:#fff;
+ text-decoration:none;
+ transition:0.3s;
+}
+
+.social a:hover{
+ background:#22c55e;
+ color:#000;
+ transform:scale(1.1);
+}
+
+.fade{
+ animation:fadeSwitch 0.4s;
+}
+
+@keyframes fadeSwitch{
+ from{opacity:0; transform:translateY(10px)}
+ to{opacity:1; transform:translateY(0)}
+}
+
+@keyframes fadeIn{
+ from{opacity:0}
+ to{opacity:1}
+}
 </style></head><body><nav>
 <span class="menu-btn" onclick="toggleMenu()">☰</span><div class="dropdown" id="menu">
 <a onclick="switchMode('gaspar')">GasparDev</a>
@@ -23,19 +61,29 @@ header{text-align:center;padding:60px}
 </nav><header>
 <h1 id="title">👨‍💻 Gzee Scripts Dev</h1>
 <p id="subtitle">Desenvolvedor</p>
-</header><div class="container"><div class="card">
+</header><div class="container" id="content"><div class="card fade">
 <h2>🚀 Bem-vindo</h2>
 <p id="desc">Esse é meu portfólio profissional.</p>
-</div><div class="card">
+<a class="btn" href="https://wa.me/5519995729970" target="_blank">📱 WhatsApp</a>
+</div><div class="card fade">
 <h2>🛠️ Serviços</h2>
 <p id="serv1">🌐 Criação de sites</p>
 <p id="serv2">🤖 Bots</p>
 <p id="serv3">⚙️ Scripts</p>
-</div><div class="card" id="projetos">
+</div><div class="card fade" id="projetos">
 <h2>📂 Projetos</h2>
 <p id="proj1">✔️ Bots</p>
 <p id="proj2">✔️ Sistemas</p>
 <p id="proj3">✔️ Sites</p>
+</div><div class="card fade" id="socialBox">
+<h2>🌐 Redes</h2>
+<div class="social">
+<a href="https://wa.me/5519995729970" target="_blank">📱 WhatsApp</a>
+<a href="https://instagram.com/gzeescriptsdev" target="_blank">📸 Instagram</a>
+<a href="#">🎵 TikTok</a>
+<a href="#">▶️ YouTube</a>
+<a href="#">💬 Discord</a>
+</div>
 </div></div><script>
 function toggleMenu(){
 let m=document.getElementById('menu');
@@ -43,35 +91,44 @@ m.style.display=m.style.display==='block'?'none':'block'
 }
 
 function switchMode(mode){
+let content=document.getElementById('content');
+content.classList.remove('fade');
+void content.offsetWidth;
+content.classList.add('fade');
+
+let social=document.getElementById('socialBox');
 
 if(mode==='gaspar'){
-  document.getElementById('title').innerText='👨‍💻 Gaspar Dev'
-  document.getElementById('subtitle').innerText='Full Stack Dev'
-  document.getElementById('desc').innerText='Portfólio avançado com outros projetos'
+ document.getElementById('title').innerText='👨‍💻 Gaspar Dev'
+ document.getElementById('subtitle').innerText='Full Stack Dev'
+ document.getElementById('desc').innerText='Portfólio avançado com outros projetos'
 
-  document.getElementById('serv1').innerText='⚙️ Sistemas'
-  document.getElementById('serv2').innerText='🤖 Automações'
-  document.getElementById('serv3').innerText='🌐 Web Apps'
+ document.getElementById('serv1').innerText='⚙️ Sistemas'
+ document.getElementById('serv2').innerText='🤖 Automações'
+ document.getElementById('serv3').innerText='🌐 Web Apps'
 
-  document.getElementById('proj1').innerText='✔️ Plataformas'
-  document.getElementById('proj2').innerText='✔️ APIs'
-  document.getElementById('proj3').innerText='✔️ Bots avançados'
+ document.getElementById('proj1').innerText='✔️ Plataformas'
+ document.getElementById('proj2').innerText='✔️ APIs'
+ document.getElementById('proj3').innerText='✔️ Bots avançados'
+
+ social.style.display='none'
 }
 
 if(mode==='gzee'){
-  document.getElementById('title').innerText='👨‍💻 Gzee Scripts Dev'
-  document.getElementById('subtitle').innerText='Desenvolvedor'
-  document.getElementById('desc').innerText='Esse é meu portfólio profissional.'
+ document.getElementById('title').innerText='👨‍💻 Gzee Scripts Dev'
+ document.getElementById('subtitle').innerText='Desenvolvedor'
+ document.getElementById('desc').innerText='Esse é meu portfólio profissional.'
 
-  document.getElementById('serv1').innerText='🌐 Criação de sites'
-  document.getElementById('serv2').innerText='🤖 Bots'
-  document.getElementById('serv3').innerText='⚙️ Scripts'
+ document.getElementById('serv1').innerText='🌐 Criação de sites'
+ document.getElementById('serv2').innerText='🤖 Bots'
+ document.getElementById('serv3').innerText='⚙️ Scripts'
 
-  document.getElementById('proj1').innerText='✔️ Bots'
-  document.getElementById('proj2').innerText='✔️ Sistemas'
-  document.getElementById('proj3').innerText='✔️ Sites'
+ document.getElementById('proj1').innerText='✔️ Bots'
+ document.getElementById('proj2').innerText='✔️ Sistemas'
+ document.getElementById('proj3').innerText='✔️ Sites'
+
+ social.style.display='block'
 }
-
 }
 </script></body>
 </html>
