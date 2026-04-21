@@ -1,8 +1,11 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dev Portfolio</title><style>
+<title>Dev Portfolio</title>
+
+<style>
 body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
 nav{background:#020617;padding:15px;text-align:center;position:relative}
 .menu-btn{position:absolute;left:15px;top:12px;font-size:20px;cursor:pointer;transition:0.3s}
@@ -52,39 +55,68 @@ header{text-align:center;padding:60px}
  from{opacity:0}
  to{opacity:1}
 }
-</style></head><body><nav>
-<span class="menu-btn" onclick="toggleMenu()">☰</span><div class="dropdown" id="menu">
+</style>
+</head>
+
+<body>
+
+<nav>
+<span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+<div class="dropdown" id="menu">
 <a onclick="switchMode('gaspar')">GasparDev</a>
 <a onclick="switchMode('gzee')">GzeeScripts</a>
-</div><a href="#">Home</a> <a href="#projetos">Projetos</a>
+</div>
 
-</nav><header>
+<a href="#">Home</a> 
+<a href="#projetos">Projetos</a>
+</nav>
+
+<header>
 <h1 id="title">👨‍💻 Gzee Scripts Dev</h1>
 <p id="subtitle">Desenvolvedor</p>
-</header><div class="container" id="content"><div class="card fade">
+</header>
+
+<div class="container" id="content">
+
+<div class="card fade">
 <h2>🚀 Bem-vindo</h2>
 <p id="desc">Esse é meu portfólio profissional.</p>
-<a class="btn" href="https://wa.me/351924423740" target="_blank">📱 WhatsApp</a>
-</div><div class="card fade">
+
+<a class="btn" id="whatsBtn"
+href="https://wa.me/5519995729970?text=Olá%20vim%20pelo%20site!"
+target="_blank">📱 WhatsApp</a>
+
+</div>
+
+<div class="card fade">
 <h2>🛠️ Serviços</h2>
 <p id="serv1">🌐 Criação de sites</p>
 <p id="serv2">🤖 Bots</p>
 <p id="serv3">⚙️ Scripts</p>
-</div><div class="card fade" id="projetos">
+</div>
+
+<div class="card fade" id="projetos">
 <h2>📂 Projetos</h2>
 <p id="proj1">✔️ Bots</p>
 <p id="proj2">✔️ Sistemas</p>
 <p id="proj3">✔️ Sites</p>
-</div><div class="card fade" id="socialBox">
+</div>
+
+<div class="card fade" id="socialBox">
 <h2>🌐 Redes</h2>
 <div class="social">
 <a href="https://wa.me/5519995729970" target="_blank">📱 WhatsApp</a>
 <a href="https://instagram.com/gzeescriptsdev" target="_blank">📸 Instagram</a>
 <a href="https://www.youtube.com/@gzeescripts" target="_blank">🎥 Youtube</a>
 <a href="https://www.tiktok.com/@gzeescripts" target="_blank">🎵 TikTok</a>
- <a href="https://discord.com/users/1396612954874581135" target="_blank">💬 Discord</a>
+<a href="https://discord.com/users/1396612954874581135" target="_blank">💬 Discord</a>
 </div>
-</div></div><script>
+</div>
+
+</div>
+
+<script>
 function toggleMenu(){
 let m=document.getElementById('menu');
 m.style.display=m.style.display==='block'?'none':'block'
@@ -111,6 +143,10 @@ if(mode==='gaspar'){
  document.getElementById('proj2').innerText='✔️ APIs'
  document.getElementById('proj3').innerText='✔️ Bots avançados'
 
+ // 🔥 MUDA O WHATSAPP DO GASPAR
+ document.getElementById('whatsBtn').href =
+ \"https://wa.me/351924423740?text=Olá%20vim%20pelo%20site!\"
+
  social.style.display='none'
 }
 
@@ -127,8 +163,14 @@ if(mode==='gzee'){
  document.getElementById('proj2').innerText='✔️ Sistemas'
  document.getElementById('proj3').innerText='✔️ Sites'
 
+ // 🔥 VOLTA PRO SEU WHATSAPP
+ document.getElementById('whatsBtn').href =
+ \"https://wa.me/5519995729970?text=Olá%20vim%20pelo%20site\"
+
  social.style.display='block'
 }
 }
-</script></body>
+</script>
+
+</body>
 </html>
