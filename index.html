@@ -1,173 +1,77 @@
 <!DOCTYPE html><html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Portfolio</title>  <style>
-    body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
-
-    nav { background:#020617; padding:15px; text-align:center; position:relative; }
-
-    /* BOTÃO 3 BARRAS */
-    .menu-btn {
-      position:absolute;
-      left:15px;
-      top:12px;
-      font-size:20px;
-      cursor:pointer;
-    }
-
-    /* MENU DROPDOWN */
-    .dropdown {
-      display:none;
-      position:absolute;
-      top:50px;
-      left:15px;
-      background:#1e293b;
-      border-radius:10px;
-      padding:10px;
-      box-shadow:0 5px 15px rgba(0,0,0,0.5);
-    }
-
-    .dropdown a {
-      display:block;
-      padding:8px;
-      color:#fff;
-      text-decoration:none;
-    }
-
-    .dropdown a:hover {
-      background:#22c55e;
-      color:#000;
-      border-radius:6px;
-    }
-
-    nav a {
-      color:#fff;
-      margin:0 15px;
-      text-decoration:none;
-      font-weight:bold;
-      position:relative;
-      transition:0.3s;
-    }
-
-    nav a:hover { color:#22c55e; }
-
-    nav a::after {
-      content:"";
-      position:absolute;
-      width:0%;
-      height:2px;
-      bottom:-5px;
-      left:0;
-      background:#22c55e;
-      transition:0.3s;
-    }
-
-    nav a:hover::after { width:100%; }
-
-    header { text-align:center; padding:60px 20px; }
-
-    .container { max-width:1000px; margin:auto; padding:20px; }
-
-    .card {
-      background:#1e293b;
-      padding:20px;
-      margin-bottom:20px;
-      border-radius:12px;
-      transition:0.3s;
-    }
-
-    .card:hover {
-      transform:translateY(-6px);
-      box-shadow:0 10px 25px rgba(0,0,0,0.4);
-    }
-
-    .btn {
-      display:inline-block;
-      padding:10px 18px;
-      background:#22c55e;
-      color:#000 !important;
-      text-decoration:none;
-      border-radius:8px;
-      margin-top:10px;
-      transition:0.3s;
-      font-weight:bold;
-    }
-
-    .btn:hover {
-      background:#16a34a;
-      transform:scale(1.05);
-      color:#000 !important;
-    }
-
-    .card a {
-      color:#22c55e;
-      text-decoration:none;
-      font-weight:bold;
-    }
-
-    .card a:hover {
-      text-decoration:underline;
-    }
-
-    footer {
-      text-align:center;
-      padding:20px;
-      color:#94a3b8;
-    }
-  </style></head><body><nav>
-  <span class="menu-btn" onclick="toggleMenu()">☰</span>  <div class="dropdown" id="menu">
-    <a href="gaspardev.html">GasparDev</a>
-    <a href="index.html">GzeeScripts</a>
-  </div><a href="index.html">Home</a> <a href="sobre.html">Sobre</a> <a href="projetos.html">Projetos</a> <a href="contato.html">Contato</a> <a href="habilidades.html">Habilidades</a> <a href="servicos.html">Serviços</a> <a href="experiencia.html">Experiência</a> <a href="redes.html">Redes</a>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dev Portfolio</title><style>
+body{margin:0;font-family:Arial;background:#0f172a;color:#fff}
+nav{background:#020617;padding:15px;text-align:center;position:relative}
+.menu-btn{position:absolute;left:15px;top:12px;font-size:20px;cursor:pointer}
+.dropdown{display:none;position:absolute;top:50px;left:15px;background:#1e293b;border-radius:10px;padding:10px}
+.dropdown a{display:block;padding:8px;color:#fff;text-decoration:none;cursor:pointer}
+.dropdown a:hover{background:#22c55e;color:#000}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold}
+header{text-align:center;padding:60px}
+.container{max-width:1000px;margin:auto;padding:20px}
+.card{background:#1e293b;padding:20px;margin-bottom:20px;border-radius:12px}
+.hidden{display:none}
+</style></head><body><nav>
+<span class="menu-btn" onclick="toggleMenu()">☰</span><div class="dropdown" id="menu">
+<a onclick="switchMode('gaspar')">GasparDev</a>
+<a onclick="switchMode('gzee')">GzeeScripts</a>
+</div><a href="#">Home</a> <a href="#projetos">Projetos</a>
 
 </nav><header>
-  <h1>👨‍💻 Gzee Scripts Dev</h1>
-  <p>Desenvolvedor</p>
-</header><div class="container">  <div class="card">
-    <h2>🚀 Bem-vindo</h2>
-    <p>Esse é meu portfólio profissional.</p>
-    <a class="btn" href="projetos.html">Ver Projetos</a>
-  </div>  <div class="card">
-    <h2>🚀 Sobre Mim</h2>
-    <p>Sou desenvolvedor focado em criação de sites, bots e automações.</p>
-  </div>  <div class="card">
-    <h2>🛠️ Serviços</h2>
-    <p>🌐 Criação de sites</p>
-    <p>🤖 Bots</p>
-    <p>⚙️ Scripts</p>
-  </div>  <div class="card">
-    <h2>📂 Projetos</h2>
-    <p>✔️ Bots</p>
-    <p>✔️ Sistemas</p>
-    <p>✔️ Sites</p>
-  </div>  <div class="card">
-    <h2>🛠️ Tecnologias</h2>
-    <p>HTML, CSS, JavaScript, React</p>
-    <p>Python, Lua</p>
-  </div>  <div class="card">
-    <h2>📞 Contato</h2><p>📧 
-  <a href="mailto: juanpablohote@gmail.com">
-    juanpablohote@gmail.com
-  </a>
-</p>
+<h1 id="title">👨‍💻 Gzee Scripts Dev</h1>
+<p id="subtitle">Desenvolvedor</p>
+</header><div class="container"><div class="card">
+<h2>🚀 Bem-vindo</h2>
+<p id="desc">Esse é meu portfólio profissional.</p>
+</div><div class="card">
+<h2>🛠️ Serviços</h2>
+<p id="serv1">🌐 Criação de sites</p>
+<p id="serv2">🤖 Bots</p>
+<p id="serv3">⚙️ Scripts</p>
+</div><div class="card" id="projetos">
+<h2>📂 Projetos</h2>
+<p id="proj1">✔️ Bots</p>
+<p id="proj2">✔️ Sistemas</p>
+<p id="proj3">✔️ Sites</p>
+</div></div><script>
+function toggleMenu(){
+let m=document.getElementById('menu');
+m.style.display=m.style.display==='block'?'none':'block'
+}
 
-<p>📸 
-  <a href="https://instagram.com/gzeescriptsdev" target="_blank">
-    @gzeescriptsdev
-  </a>
-</p>
+function switchMode(mode){
 
-<a class="btn" href="https://wa.me/5519995729970" target="_blank">
-  💬 Falar no WhatsApp
-</a>
+if(mode==='gaspar'){
+  document.getElementById('title').innerText='👨‍💻 Gaspar Dev'
+  document.getElementById('subtitle').innerText='Full Stack Dev'
+  document.getElementById('desc').innerText='Portfólio avançado com outros projetos'
 
-  </div></div><footer>
-  © 2026 Dev Portfolio
-</footer><script>
-function toggleMenu() {
-  const menu = document.getElementById('menu');
-  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  document.getElementById('serv1').innerText='⚙️ Sistemas'
+  document.getElementById('serv2').innerText='🤖 Automações'
+  document.getElementById('serv3').innerText='🌐 Web Apps'
+
+  document.getElementById('proj1').innerText='✔️ Plataformas'
+  document.getElementById('proj2').innerText='✔️ APIs'
+  document.getElementById('proj3').innerText='✔️ Bots avançados'
+}
+
+if(mode==='gzee'){
+  document.getElementById('title').innerText='👨‍💻 Gzee Scripts Dev'
+  document.getElementById('subtitle').innerText='Desenvolvedor'
+  document.getElementById('desc').innerText='Esse é meu portfólio profissional.'
+
+  document.getElementById('serv1').innerText='🌐 Criação de sites'
+  document.getElementById('serv2').innerText='🤖 Bots'
+  document.getElementById('serv3').innerText='⚙️ Scripts'
+
+  document.getElementById('proj1').innerText='✔️ Bots'
+  document.getElementById('proj2').innerText='✔️ Sistemas'
+  document.getElementById('proj3').innerText='✔️ Sites'
+}
+
 }
 </script></body>
 </html>
