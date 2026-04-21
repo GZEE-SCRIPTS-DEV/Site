@@ -1,34 +1,90 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Portfolio</title>
+  <title>Gaspar Dev</title>
+
   <style>
     body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
-    nav { background:#020617; padding:15px; text-align:center; position:relative; }.menu-btn {
-  position:absolute;
-  left:15px;
-  top:12px;
-  background:#22c55e;
-  color:#000;
-  padding:8px 12px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:bold;
-}
 
-nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-nav a:hover { color:#22c55e; }
-header { text-align:center; padding:60px 20px; }
-.container { max-width:1000px; margin:auto; padding:20px; }
-.card { background:#1e293b; padding:20px; margin-bottom:20px; border-radius:12px; }
-.btn { display:inline-block; padding:10px 18px; background:#22c55e; color:#000; text-decoration:none; border-radius:8px; margin-top:10px; }
-footer { text-align:center; padding:20px; color:#94a3b8; }
+    nav { background:#020617; padding:15px; text-align:center; position:relative; }
 
+    .menu-btn {
+      position:absolute;
+      left:15px;
+      top:12px;
+      font-size:20px;
+      cursor:pointer;
+    }
+
+    .dropdown {
+      display:none;
+      position:absolute;
+      top:50px;
+      left:15px;
+      background:#1e293b;
+      border-radius:10px;
+      padding:10px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .dropdown a {
+      display:block;
+      padding:8px;
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .dropdown a:hover {
+      background:#22c55e;
+      color:#000;
+      border-radius:6px;
+    }
+
+    nav a {
+      color:#fff;
+      margin:0 15px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    header { text-align:center; padding:60px 20px; }
+
+    .container { max-width:1000px; margin:auto; padding:20px; }
+
+    .card {
+      background:#1e293b;
+      padding:20px;
+      margin-bottom:20px;
+      border-radius:12px;
+    }
+
+    .btn {
+      display:inline-block;
+      padding:10px 18px;
+      background:#22c55e;
+      color:#000;
+      text-decoration:none;
+      border-radius:8px;
+      margin-top:10px;
+      font-weight:bold;
+    }
+
+    footer { text-align:center; padding:20px; color:#94a3b8; }
   </style>
 </head>
-<body><nav>
-  <a class="menu-btn" href="extra.html" style="position:absolute;left:15px;top:12px;background:#22c55e;color:#000;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:bold;">☰</a>
+
+<body>
+
+<nav>
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+  <div class="dropdown" id="menu">
+    <a href="gaspardev.html">GasparDev</a>
+    <a href="index.html">GzeeScripts</a>
+  </div>
+
   <a href="index.html">Home</a>
   <a href="sobre.html">Sobre</a>
   <a href="projetos.html">Projetos</a>
@@ -37,57 +93,62 @@ footer { text-align:center; padding:20px; color:#94a3b8; }
   <a href="servicos.html">Serviços</a>
   <a href="experiencia.html">Experiência</a>
   <a href="redes.html">Redes</a>
-</nav><header>
-  <h1>👨‍💻 Seu Nome</h1>
-  <p>Desenvolvedor Web</p>
-</header><div class="container">  <div class="card" id="experiencia">
-    <h2>💼 Experiência</h2>
-    <p>Experiência com desenvolvimento web, criação de sites e projetos personalizados.</p>
-  </div>  <div class="card" id="habilidades">
-    <h2>🛠️ Habilidades</h2>
-    <p>HTML, CSS, JavaScript, React</p>
-  </div>  <div class="card" id="servicos">
-    <h2>🚀 Serviços</h2>
-    <p>Criação de sites, landing pages e projetos personalizados.</p>
-  </div>  <div class="card" id="contato">
+</nav>
+
+<header>
+  <h1>👨‍💻 Gaspar Dev</h1>
+  <p>Desenvolvedor Full Stack</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>🚀 Bem-vindo</h2>
+    <p>Esse é meu portfólio alternativo com outras informações.</p>
+  </div>
+
+  <div class="card">
+    <h2>👨‍💻 Sobre Mim</h2>
+    <p>Sou desenvolvedor focado em sistemas avançados, automações e projetos complexos.</p>
+  </div>
+
+  <div class="card">
+    <h2>🛠️ Serviços</h2>
+    <p>⚙️ Sistemas completos</p>
+    <p>🤖 Automações avançadas</p>
+    <p>🌐 Web apps</p>
+  </div>
+
+  <div class="card">
+    <h2>📂 Projetos</h2>
+    <p>✔️ Plataformas</p>
+    <p>✔️ APIs</p>
+    <p>✔️ Bots inteligentes</p>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Tecnologias</h2>
+    <p>JavaScript, Node.js, React</p>
+    <p>Python, Banco de Dados</p>
+  </div>
+
+  <div class="card">
     <h2>📞 Contato</h2>
-    <p>Email: seuemail@email.com</p>
-  </div></div><footer>
-  © 2026 Dev Portfolio
-</footer></body>
-</html><!-- ===================== EXTRA.HTML ===================== --><!DOCTYPE html><html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Extra</title>
-  <style>
-    body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
-    nav { background:#020617; padding:15px; text-align:center; }
-    nav a { color:#fff; margin:0 10px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#22c55e; }
-    .container { padding:40px; }
-    .card { background:#1e293b; padding:20px; margin-bottom:20px; border-radius:12px; }
-  </style>
-</head>
-<body><nav>
-  <a href="index.html">Home</a>
-  <a href="#experiencia">Experiência</a>
-  <a href="#habilidades">Habilidades</a>
-  <a href="#servicos">Serviços</a>
-  <a href="#contato">Contato</a>
-</nav><div class="container">  <div class="card" id="experiencia">
-    <h2>💼 Experiência</h2>
-    <p>Aqui você pode detalhar sua experiência profissional, projetos e trabalhos.</p>
-  </div>  <div class="card" id="habilidades">
-    <h2>🛠️ Habilidades</h2>
-    <p>Adicione mais habilidades ou níveis (iniciante, intermediário, avançado).</p>
-  </div>  <div class="card" id="servicos">
-    <h2>🚀 Serviços</h2>
-    <p>Descreva melhor o que você oferece e como pode ajudar clientes.</p>
-  </div>  <div class="card" id="contato">
-    <h2>📞 Contato</h2>
-    <p>Email, redes sociais ou outras formas de contato.</p>
-  </div>  <div class="card">
-    <h2>🌐 Redes</h2>
-    <p>Instagram, GitHub, Discord, etc.</p>
-  </div></div></body>
+    <p>Email: exemplo@email.com</p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Gaspar Dev
+</footer>
+
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+</body>
 </html>
