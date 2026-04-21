@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gaspar Dev</title>
-
-  <style>
+  <title>Dev Portfolio</title>  <style>
     body { margin:0; font-family:Arial; background:#0f172a; color:#fff; }
 
     nav { background:#020617; padding:15px; text-align:center; position:relative; }
 
+    /* BOTÃO 3 BARRAS */
     .menu-btn {
       position:absolute;
       left:15px;
@@ -18,6 +16,7 @@
       cursor:pointer;
     }
 
+    /* MENU DROPDOWN */
     .dropdown {
       display:none;
       position:absolute;
@@ -47,7 +46,24 @@
       margin:0 15px;
       text-decoration:none;
       font-weight:bold;
+      position:relative;
+      transition:0.3s;
     }
+
+    nav a:hover { color:#22c55e; }
+
+    nav a::after {
+      content:"";
+      position:absolute;
+      width:0%;
+      height:2px;
+      bottom:-5px;
+      left:0;
+      background:#22c55e;
+      transition:0.3s;
+    }
+
+    nav a:hover::after { width:100%; }
 
     header { text-align:center; padding:60px 20px; }
 
@@ -58,97 +74,100 @@
       padding:20px;
       margin-bottom:20px;
       border-radius:12px;
+      transition:0.3s;
+    }
+
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
     }
 
     .btn {
       display:inline-block;
       padding:10px 18px;
       background:#22c55e;
-      color:#000;
+      color:#000 !important;
       text-decoration:none;
       border-radius:8px;
       margin-top:10px;
+      transition:0.3s;
       font-weight:bold;
     }
 
-    footer { text-align:center; padding:20px; color:#94a3b8; }
-  </style>
-</head>
+    .btn:hover {
+      background:#16a34a;
+      transform:scale(1.05);
+      color:#000 !important;
+    }
 
-<body>
+    .card a {
+      color:#22c55e;
+      text-decoration:none;
+      font-weight:bold;
+    }
 
-<nav>
-  <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    .card a:hover {
+      text-decoration:underline;
+    }
 
-  <div class="dropdown" id="menu">
+    footer {
+      text-align:center;
+      padding:20px;
+      color:#94a3b8;
+    }
+  </style></head><body><nav>
+  <span class="menu-btn" onclick="toggleMenu()">☰</span>  <div class="dropdown" id="menu">
     <a href="gaspardev.html">GasparDev</a>
     <a href="index.html">GzeeScripts</a>
-  </div>
+  </div><a href="index.html">Home</a> <a href="sobre.html">Sobre</a> <a href="projetos.html">Projetos</a> <a href="contato.html">Contato</a> <a href="habilidades.html">Habilidades</a> <a href="servicos.html">Serviços</a> <a href="experiencia.html">Experiência</a> <a href="redes.html">Redes</a>
 
-  <a href="index.html">Home</a>
-  <a href="sobre.html">Sobre</a>
-  <a href="projetos.html">Projetos</a>
-  <a href="contato.html">Contato</a>
-  <a href="habilidades.html">Habilidades</a>
-  <a href="servicos.html">Serviços</a>
-  <a href="experiencia.html">Experiência</a>
-  <a href="redes.html">Redes</a>
-</nav>
-
-<header>
-  <h1>👨‍💻 Gaspar Dev</h1>
-  <p>Desenvolvedor Full Stack</p>
-</header>
-
-<div class="container">
-
-  <div class="card">
+</nav><header>
+  <h1>👨‍💻 Gzee Scripts Dev</h1>
+  <p>Desenvolvedor</p>
+</header><div class="container">  <div class="card">
     <h2>🚀 Bem-vindo</h2>
-    <p>Esse é meu portfólio alternativo com outras informações.</p>
-  </div>
-
-  <div class="card">
-    <h2>👨‍💻 Sobre Mim</h2>
-    <p>Sou desenvolvedor focado em sistemas avançados, automações e projetos complexos.</p>
-  </div>
-
-  <div class="card">
+    <p>Esse é meu portfólio profissional.</p>
+    <a class="btn" href="projetos.html">Ver Projetos</a>
+  </div>  <div class="card">
+    <h2>🚀 Sobre Mim</h2>
+    <p>Sou desenvolvedor focado em criação de sites, bots e automações.</p>
+  </div>  <div class="card">
     <h2>🛠️ Serviços</h2>
-    <p>⚙️ Sistemas completos</p>
-    <p>🤖 Automações avançadas</p>
-    <p>🌐 Web apps</p>
-  </div>
-
-  <div class="card">
+    <p>🌐 Criação de sites</p>
+    <p>🤖 Bots</p>
+    <p>⚙️ Scripts</p>
+  </div>  <div class="card">
     <h2>📂 Projetos</h2>
-    <p>✔️ Plataformas</p>
-    <p>✔️ APIs</p>
-    <p>✔️ Bots inteligentes</p>
-  </div>
+    <p>✔️ Bots</p>
+    <p>✔️ Sistemas</p>
+    <p>✔️ Sites</p>
+  </div>  <div class="card">
+    <h2>🛠️ Tecnologias</h2>
+    <p>HTML, CSS, JavaScript, React</p>
+    <p>Python, Lua</p>
+  </div>  <div class="card">
+    <h2>📞 Contato</h2><p>📧 
+  <a href="mailto: juanpablohote@gmail.com">
+    juanpablohote@gmail.com
+  </a>
+</p>
 
-  <div class="card">
-    <h2>🧠 Tecnologias</h2>
-    <p>JavaScript, Node.js, React</p>
-    <p>Python, Banco de Dados</p>
-  </div>
+<p>📸 
+  <a href="https://instagram.com/gzeescriptsdev" target="_blank">
+    @gzeescriptsdev
+  </a>
+</p>
 
-  <div class="card">
-    <h2>📞 Contato</h2>
-    <p>Email: exemplo@email.com</p>
-  </div>
+<a class="btn" href="https://wa.me/5519995729970" target="_blank">
+  💬 Falar no WhatsApp
+</a>
 
-</div>
-
-<footer>
-  © 2026 Gaspar Dev
-</footer>
-
-<script>
+  </div></div><footer>
+  © 2026 Dev Portfolio
+</footer><script>
 function toggleMenu() {
   const menu = document.getElementById('menu');
   menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
-</script>
-
-</body>
+</script></body>
 </html>
