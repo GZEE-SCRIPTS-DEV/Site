@@ -42,9 +42,7 @@ header{text-align:center;padding:60px}
  transform:scale(1.1);
 }
 
-.fade{
- animation:fadeSwitch 0.4s;
-}
+.fade{animation:fadeSwitch 0.4s}
 
 @keyframes fadeSwitch{
  from{opacity:0; transform:translateY(10px)}
@@ -106,7 +104,6 @@ target="_blank">📱 WhatsApp</a>
 <div class="card fade" id="socialBox">
 <h2>🌐 Redes</h2>
 <div class="social">
-<a href="https://wa.me/5519995729970" target="_blank">📱 WhatsApp</a>
 <a href="https://instagram.com/gzeescriptsdev" target="_blank">📸 Instagram</a>
 <a href="https://www.youtube.com/@gzeescripts" target="_blank">🎥 Youtube</a>
 <a href="https://www.tiktok.com/@gzeescripts" target="_blank">🎵 TikTok</a>
@@ -117,20 +114,24 @@ target="_blank">📱 WhatsApp</a>
 </div>
 
 <script>
+
 function toggleMenu(){
 let m=document.getElementById('menu');
 m.style.display=m.style.display==='block'?'none':'block'
 }
 
 function switchMode(mode){
+
 let content=document.getElementById('content');
 content.classList.remove('fade');
 void content.offsetWidth;
 content.classList.add('fade');
 
 let social=document.getElementById('socialBox');
+let btn=document.getElementById('whatsBtn');
 
 if(mode==='gaspar'){
+
  document.getElementById('title').innerText='👨‍💻 Gaspar Dev'
  document.getElementById('subtitle').innerText='Full Stack Dev'
  document.getElementById('desc').innerText='Portfólio avançado com outros projetos'
@@ -143,14 +144,15 @@ if(mode==='gaspar'){
  document.getElementById('proj2').innerText='✔️ APIs'
  document.getElementById('proj3').innerText='✔️ Bots avançados'
 
- // 🔥 MUDA O WHATSAPP DO GASPAR
- document.getElementById('whatsBtn').href =
- \"https://wa.me/351924423740?text=Olá%20vim%20pelo%20site!\"
+ // MOSTRA botão + muda número
+ btn.style.display='inline-block'
+ btn.href="https://wa.me/351924423740?text=Olá%20vim%20pelo%20GasparDev"
 
  social.style.display='none'
 }
 
 if(mode==='gzee'){
+
  document.getElementById('title').innerText='👨‍💻 Gzee Scripts Dev'
  document.getElementById('subtitle').innerText='Desenvolvedor'
  document.getElementById('desc').innerText='Esse é meu portfólio profissional.'
@@ -163,13 +165,14 @@ if(mode==='gzee'){
  document.getElementById('proj2').innerText='✔️ Sistemas'
  document.getElementById('proj3').innerText='✔️ Sites'
 
- // 🔥 VOLTA PRO SEU WHATSAPP
- document.getElementById('whatsBtn').href =
- \"https://wa.me/5519995729970\"
+ // ESCONDE botão no Gzee
+ btn.style.display='none'
 
  social.style.display='block'
 }
+
 }
+
 </script>
 
 </body>
